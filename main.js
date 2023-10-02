@@ -83,3 +83,120 @@ console.log(outputSong);
 const newline = `In order to get a multi-line string with the old style, we had to concatenate two strings with + sign and include a newline character. Writing multi-line strings became easier with template literals because you just need to add a new line in the string by pressing the enter key and type the text as you want it to appear.`;
 
 console.log(newline);
+
+/*===
+   -> Including quotes in strings <-
+===*/
+
+const goodQuotes1 = 'She said "I think so!"';
+const goodQuotes2 = `She said "I think so 2!"`;
+const bigmouth = `I\'ve got the work`;
+
+console.log(goodQuotes1);
+console.log(goodQuotes2);
+console.log(bigmouth);
+
+
+
+/*===
+   -> Numbers vs. strings <-
+===*/
+
+// number
+
+const myString = "123";
+const myNum = Number(myString);
+
+console.log(typeof myNum);
+
+
+// string
+const myNum2 = 123;
+const myString2 = String(myNum2);
+console.log(typeof myString2);
+
+
+/*===
+   -> Strings as objects <-
+===*/
+
+// Finding the length of a string
+const browserType = "mozilla";
+console.log(browserType.length);
+console.log(browserType[0]);
+console.log(browserType[browserType.length - 1]);
+
+
+// Testing if a string contains a substring
+
+const browserType1 = "sakibur";
+
+if (browserType1.includes("sakib")){
+   console.log("found sakib name!");
+}else{
+   console.log("No Sakib name found!");
+}
+
+const browserType2 = "sakibur";
+
+if (browserType2.startsWith("sakib")){
+   console.log("Word start with sakib name!");
+}else{
+   console.log("Word don't start with sakib name!");
+}
+
+const browserType3 = "sakibur";
+
+if (browserType3.endsWith("sakib")){
+   console.log("Word end with sakib name!");
+}else{
+   console.log("Word don't end with sakib name!");
+}
+
+
+
+// Finding the position of a substring in a string
+
+const tagline = "If the string contains the substring";
+
+console.log(tagline.indexOf("substring"));
+console.log(tagline.indexOf("x"));
+
+
+
+// Extracting a substring from a string
+
+console.log(browserType1.slice(2, 6));
+console.log(browserType1.slice(2));
+
+// Changing case
+
+const radData = "My NaMe Is SaKiBuR";
+
+console.log(radData.toLowerCase());
+console.log(radData.toUpperCase());
+
+
+// Updating parts of a string
+
+const browserType4 = "Firefox";
+const updated = browserType4.replace("Fire", "Water");
+
+console.log(updated);
+console.log(browserType4);
+
+// Updating original string
+
+let browserType5 = "Firefox";
+
+browserType5 = browserType5.replace("Fire", "Water");
+
+console.log(browserType5);
+
+
+// Updating All string
+
+let quote = "To be or not to be";
+quote = quote.replaceAll("be", "code");
+
+console.log(quote);
